@@ -1,10 +1,13 @@
 import Dexie, { EntityTable } from "dexie";
+import * as zod from "zod";
 
-export interface Link {
-  id: number;
-  shortened_url: string;
-  url: string;
-}
+export type Link = zod.infer<typeof schemaLink>;
+
+export const schemaLink = zod.object({
+  id: zod.number(),
+  shortened_url: zod.string(),
+  url: zod.string().min(1, "Please add a link"),
+});
 
 export class Database extends Dexie {
   links!: EntityTable<Link, "id">;

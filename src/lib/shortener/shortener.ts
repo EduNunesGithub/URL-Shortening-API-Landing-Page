@@ -1,21 +1,20 @@
 import { Link } from "@/database/database";
 import POST from "@/lib/shortener/POST/POST";
 
-export type Queries = "POST {shortened_url|url}";
+export type Queries = "POST {url}";
 
 export type Query = {
-  "POST {shortened_url|url}": "POST {shortened_url|url}";
+  "POST {url}": "POST {url}";
 };
 
 export type Params = {
-  "POST {shortened_url|url}": {
-    shortened_url: Link["shortened_url"];
+  "POST {url}": {
     url: Link["url"];
   };
 };
 
 export type Response = {
-  "POST {shortened_url|url}": Link;
+  "POST {url}": Link;
 };
 
 export default async function shortener<T extends Queries>(
@@ -23,8 +22,8 @@ export default async function shortener<T extends Queries>(
   params: Params[T],
 ): Promise<Response[T]> {
   switch (query) {
-    case "POST {shortened_url|url}":
-      return POST("POST {shortened_url|url}", { ...params });
+    case "POST {url}":
+      return POST("POST {url}", { ...params });
   }
 
   throw new Error("The query has not been processed");

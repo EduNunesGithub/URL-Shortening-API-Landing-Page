@@ -15,7 +15,7 @@ export const Hero = () => (
 
       <p
         className={twMerge(
-          "sm:mb-4 sm:text-colorado-peak sm:typography-subtitle",
+          "sm:mb-4 sm:text-colorado-peak sm:typography-subtitle-01",
           "lg:mb-9",
         )}
       >

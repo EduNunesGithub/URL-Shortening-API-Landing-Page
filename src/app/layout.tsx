@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { twMerge } from "tailwind-merge";
+import { LayoutClient } from "@/app/LayoutClient";
 import "@/app/globals.css";
 
 const poppins = Poppins({
@@ -27,11 +28,13 @@ export default function RootLayout({
           "sm:grid sm:grid-cols-1 sm:grid-rows-[auto_1fr_auto] sm:min-h-dvh sm:w-full",
         )}
       >
-        <div></div>
+        <LayoutClient>
+          <div></div>
 
-        {children}
+          {children}
 
-        <div></div>
+          <div></div>
+        </LayoutClient>
       </body>
     </html>
   );

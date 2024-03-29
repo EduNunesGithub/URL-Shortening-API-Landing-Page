@@ -1,28 +1,33 @@
 import axios, { AxiosError } from "axios";
-import { ShortenParams, ShortenResponse } from "@/app/api/shorten/route";
-import { database } from "@/database/database";
-import { Params, Query, Response } from "@/lib/shortener/shortener";
+import { NextResponse } from "next/server";
 
-export default async function POST(
-  query: Query["POST {url}"],
-  { url }: Params["POST {url}"],
-): Promise<Response["POST {url}"]> {
+export type ShortenParams = {
+  url: string;
+};
+
+export type ShortenResponse = {
+  200: { result_url: string };
+  400: { error: string };
+};
+
+export async function POST(request: Request) {
+  const { url }: ShortenParams = await request.json();
+
   const response: { data: any; init: ResponseInit | undefined } = {
     data: undefined,
     init: {},
   };
   const error: { fatal: boolean } = { fatal: false };
-  const shortenParams: ShortenParams = {
-    url: url,
-  };
 
   await axios<ShortenResponse["200"]>({
-    data: shortenParams,
+    data: {
+      url: url,
+    },
     headers: {
       "Content-Type": "application/json",
     },
     method: "post",
-    url: `${process.env.NEXT_PUBLIC_SITE_URL}/api/shorten`,
+    url: "https://cleanuri.com/api/v1/shorten",
   })
     .then((res) => {
       response.data = res.data;
@@ -63,23 +68,7 @@ export default async function POST(
       return (error.fatal = true);
     });
 
-  if (error.fatal === true) throw new Error("fatal.at.shorten.client");
+  if (error.fatal === true) throw new Error("fatal.at.shorten.server");
 
-  if (response.init?.status !== 200) throw new Error(response.init?.statusText);
-
-  const { result_url }: ShortenResponse["200"] = response.data;
-
-  const link = await database.links
-    .add({
-      shortened_url: result_url,
-      url: url,
-    })
-    .then((id) => database.links.get(id));
-
-  switch (link) {
-    case undefined:
-      throw new Error("Unable to add link to the database");
-    default:
-      return link;
-  }
+  return NextResponse.json(response.data, response.init);
 }

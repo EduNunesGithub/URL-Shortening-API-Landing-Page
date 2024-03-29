@@ -5,9 +5,15 @@ const config: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
+      borderWidth: {
+        3: "0.1875rem",
+      },
       colors: {
+        "aircraft-white": "#EFF1F7",
         "colorado-peak": "#9E9AA8",
         "deep-well": "#34313D",
+        "firecracker-salmon": "#F46363",
+        "violet-purple": "#3A3054",
       },
       fontFamily: {
         poppins: "var(--font-poppins)",
@@ -16,6 +22,11 @@ const config: Config = {
         85: "21.25rem",
         120: "30rem",
       },
+      margin: {
+        21: "5.25rem",
+        38: "9.5rem",
+        42: "10.5rem",
+      },
       maxWidth: {
         141: "35.25rem",
         142: "35.5rem",
@@ -23,6 +34,7 @@ const config: Config = {
         "page-container": "69.375rem",
       },
       padding: {
+        13: "3.25rem",
         93: "23.25rem",
       },
       transitionDuration: {
@@ -49,8 +61,10 @@ const config: Config = {
     plugin(({ addBase, addComponents, addUtilities }) => ({
       addComponents: addComponents({
         ".button": {},
+        ".typography-error": {},
         ".typography-H1": {},
-        ".typography-subtitle": {},
+        ".typography-subtitle-01": {},
+        ".typography-subtitle-02": {},
       }),
     })),
   ],

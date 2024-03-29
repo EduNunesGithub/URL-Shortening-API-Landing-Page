@@ -2,11 +2,17 @@ import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import PNGPlaceholder from "#/PNG/placeholder.png";
 import SVGIllustrationWorking from "#/SVG/illustration-working.svg";
+import { Form } from "@/components/Form/Form";
 import { Hero } from "@/components/Hero/Hero";
 
 const Home = () => (
   <main className="sm:flex sm:flex-col sm:h-full sm:w-full">
-    <section className="sm:flex sm:overflow-hidden sm:px-6 sm:w-full">
+    <section
+      className={twMerge(
+        "sm:flex sm:mb-42 sm:overflow-hidden sm:px-6 sm:w-full",
+        "lg:mb-38",
+      )}
+    >
       <div
         className={twMerge(
           "sm:flex sm:flex-col sm:items-center sm:max-w-page-container sm:mx-auto sm:pt-93 sm:relative sm:w-full sm:z-0",
@@ -36,6 +42,23 @@ const Home = () => (
         <Hero />
       </div>
     </section>
+
+    <div className="sm:bg-aircraft-white sm:flex sm:flex-col sm:w-full">
+      <section
+        className={twMerge(
+          "sm:flex sm:items-center sm:justify-center sm:-mt-20 sm:px-6 sm:relative sm:w-full",
+          "lg:-mt-21",
+        )}
+      >
+        <h2 className="sm:absolute sm:h-0 sm:opacity-0 sm:overflow-hidden sm:w-0">
+          Form and list of shortened links
+        </h2>
+
+        <div className="sm:flex sm:max-w-page-container sm:mx-auto sm:w-full">
+          <Form />
+        </div>
+      </section>
+    </div>
   </main>
 );
 

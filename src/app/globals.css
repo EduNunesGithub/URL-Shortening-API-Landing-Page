@@ -11,6 +11,12 @@
   padding: 0;
 }
 
+*:focus {
+  outline-offset: 0.25rem;
+  outline-style: dotted;
+  outline-width: 0.125rem;
+}
+
 @layer components {
   @media (min-width: 0px) {
     .button {
@@ -31,6 +37,14 @@
       width: fit-content;
     }
 
+    .typography-error {
+      font-family: var(--font-poppins);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.0065em;
+      line-height: 1.125rem;
+    }
+
     .typography-H1 {
       font-family: var(--font-poppins);
       font-size: 2.625rem;
@@ -39,12 +53,20 @@
       line-height: 3rem;
     }
 
-    .typography-subtitle {
+    .typography-subtitle-01 {
       font-family: var(--font-poppins);
       font-size: 1.125rem;
       font-weight: 500;
       letter-spacing: 0.0065em;
       line-height: 1.875rem;
+    }
+
+    .typography-subtitle-02 {
+      font-family: var(--font-poppins);
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.0075em;
+      line-height: 2.25rem;
     }
 
     .button:hover {
@@ -53,14 +75,25 @@
   }
 
   @media (min-width: 907.5px) {
+    .button {
+    }
+
+    .typography-error {
+      font-size: 1rem;
+    }
+
     .typography-H1 {
       font-size: 5rem;
       line-height: 5.625rem;
     }
 
-    .typography-subtitle {
+    .typography-subtitle-01 {
       font-size: 1.375rem;
       line-height: 2.25rem;
+    }
+
+    .typography-subtitle-02 {
+      font-size: 1.25rem;
     }
   }
 }
