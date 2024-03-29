@@ -1,0 +1,48 @@
+{
+  "dependencies": {
+    "next": "14.1.4",
+    "next-sitemap": "^4.2.3",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "postcss": "^8",
+    "prettier": "3.2.5",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "name": "my-app",
+  "prettier": {
+    "endOfLine": "crlf",
+    "experimentalTernaries": true,
+    "semi": true,
+    "singleAttributePerLine": true
+  },
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "commit": "cz",
+    "dev": "next dev",
+    "lint": "next lint",
+    "postbuild": "next-sitemap",
+    "prepare": "husky",
+    "start": "next start"
+  },
+  "version": "0.1.0",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
