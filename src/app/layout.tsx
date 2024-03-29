@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Poppins } from "next/font/google";
+import { twMerge } from "tailwind-merge";
+import "@/app/globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  weight: ["500", "700"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +21,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={twMerge(
+          poppins.variable,
+          "sm:grid sm:grid-cols-1 sm:grid-rows-[auto_1fr_auto] sm:min-h-dvh sm:w-full",
+        )}
+      >
+        <div></div>
+
+        {children}
+
+        <div></div>
+      </body>
     </html>
   );
 }

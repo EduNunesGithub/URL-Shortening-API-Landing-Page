@@ -2,32 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  min-height: 0;
+  min-width: 0;
+  overflow-wrap: break-word;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  @media (min-width: 0px) {
+    .button {
+      align-items: center;
+      background-color: #2bd0d0;
+      border-radius: 100rem;
+      color: #ffffff;
+      display: flex;
+      font-family: var(--font-poppins);
+      font-size: 1.25rem;
+      font-weight: 700;
+      justify-content: center;
+      line-height: 1.875rem;
+      max-width: 100%;
+      min-height: 3.5rem;
+      padding: 0.625rem 2.5rem 0.625rem 2.5rem;
+      text-align: center;
+      width: fit-content;
+    }
+
+    .typography-H1 {
+      font-family: var(--font-poppins);
+      font-size: 2.625rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 3rem;
+    }
+
+    .typography-subtitle {
+      font-family: var(--font-poppins);
+      font-size: 1.125rem;
+      font-weight: 500;
+      letter-spacing: 0.0065em;
+      line-height: 1.875rem;
+    }
+
+    .button:hover {
+      background-color: #9ae3e3;
+    }
+  }
+
+  @media (min-width: 907.5px) {
+    .typography-H1 {
+      font-size: 5rem;
+      line-height: 5.625rem;
+    }
+
+    .typography-subtitle {
+      font-size: 1.375rem;
+      line-height: 2.25rem;
+    }
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@media (max-width: 375px) {
+  html {
+    font-size: 4.2666vw;
   }
 }
