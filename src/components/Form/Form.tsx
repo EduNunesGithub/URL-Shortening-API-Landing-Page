@@ -40,7 +40,7 @@ export const Form = () => {
     <form
       autoComplete="off"
       className={twMerge(
-        "sm:bg-violet-purple sm:flex sm:flex-col sm:gap-4 sm:p-6 sm:rounded-xl sm:w-full",
+        "sm:background-shorten sm:bg-violet-purple sm:flex sm:flex-col sm:gap-4 sm:p-6 sm:rounded-xl sm:w-full",
         "lg:flex-row lg:gap-6 lg:items-start lg:px-16 lg:py-13",
         Object.keys(formState.errors).length !== 0 && "lg:pb-[1.625rem]",
       )}

@@ -46,6 +46,7 @@ const config: Config = {
       },
       padding: {
         13: "3.25rem",
+        23: "5.75rem",
         93: "23.25rem",
       },
       transitionDuration: {
@@ -73,6 +74,8 @@ const config: Config = {
   plugins: [
     plugin(({ addBase, addComponents, addUtilities }) => ({
       addComponents: addComponents({
+        ".background-boost": {},
+        ".background-shorten": {},
         ".button": {},
         ".typography-body-01": {},
         ".typography-body-02": {},

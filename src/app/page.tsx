@@ -3,6 +3,7 @@ import { twMerge } from "tailwind-merge";
 import PNGPlaceholder from "#/PNG/placeholder.png";
 import SVGIllustrationWorking from "#/SVG/illustration-working.svg";
 import { Advantages } from "@/components/Advantages/Advantages";
+import { BannerGetStarted } from "@/components/BannerGetStarted/BannerGetStarted";
 import { Form } from "@/components/Form/Form";
 import { Hero } from "@/components/Hero/Hero";
 import { ShortenedLinks } from "@/components/ShortenedLinks/ShortenedLinks";
@@ -63,12 +64,18 @@ const Home = () => (
         </div>
       </section>
 
-      <section className="sm:flex sm:px-6 sm:w-full">
+      <section
+        className={twMerge("sm:flex sm:mb-20 sm:px-6 sm:w-full", "lg:mb-30")}
+      >
         <div className="sm:flex sm:max-w-page-container sm:mx-auto sm:w-full">
           <Advantages />
         </div>
       </section>
     </div>
+
+    <section className="sm:flex sm:w-full">
+      <BannerGetStarted />
+    </section>
   </main>
 );
 
