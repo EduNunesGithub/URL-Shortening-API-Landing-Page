@@ -4,6 +4,7 @@ import PNGPlaceholder from "#/PNG/placeholder.png";
 import SVGIllustrationWorking from "#/SVG/illustration-working.svg";
 import { Form } from "@/components/Form/Form";
 import { Hero } from "@/components/Hero/Hero";
+import { ShortenedLinks } from "@/components/ShortenedLinks/ShortenedLinks";
 
 const Home = () => (
   <main className="sm:flex sm:flex-col sm:h-full sm:w-full">
@@ -54,8 +55,10 @@ const Home = () => (
           Form and list of shortened links
         </h2>
 
-        <div className="sm:flex sm:max-w-page-container sm:mx-auto sm:w-full">
+        <div className="sm:flex sm:flex-col sm:gap-6 sm:max-w-page-container sm:mx-auto sm:w-full">
           <Form />
+
+          <ShortenedLinks />
         </div>
       </section>
     </div>

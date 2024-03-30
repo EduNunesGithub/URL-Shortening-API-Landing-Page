@@ -69,6 +69,17 @@ export default async function POST(
 
   const { result_url }: ShortenResponse["200"] = response.data;
 
+  const links = await database.links.toArray();
+  if (links.length >= 4) {
+    const sorted = links.toSorted(({ id: idA }, { id: idB }) => idA - idB);
+    const items = sorted.slice(0, -4);
+
+    for (const item in items) {
+      const { id } = items[item];
+      await database.links.delete(id);
+    }
+  }
+
   const link = await database.links
     .add({
       shortened_url: result_url,

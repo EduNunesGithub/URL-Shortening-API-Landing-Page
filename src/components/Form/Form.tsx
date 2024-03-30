@@ -18,13 +18,23 @@ export const Form = () => {
 
   const { mutateAsync } = useMutation({
     mutationFn: (data: ShortenerForm) => shortener("POST {url}", data),
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: ["todos"] }),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["todos"] });
+    },
   });
 
-  const { status } = useQuery({
-    queryFn: () => [],
+  const { data, status } = useQuery({
+    queryFn: () => shortener("GET {}", {}),
     queryKey: ["todos"],
   });
+
+  React.useLayoutEffect(() => {
+    switch (status) {
+      case "success":
+        reset();
+        break;
+    }
+  }, [data]);
 
   return (
     <form

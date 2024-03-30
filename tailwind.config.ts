@@ -6,6 +6,7 @@ const config: Config = {
   theme: {
     extend: {
       borderWidth: {
+        1: "0.0625rem",
         3: "0.1875rem",
       },
       colors: {
@@ -13,6 +14,7 @@ const config: Config = {
         "colorado-peak": "#9E9AA8",
         "deep-well": "#34313D",
         "firecracker-salmon": "#F46363",
+        "mermaid-net": "#2BD0D0",
         "violet-purple": "#3A3054",
       },
       fontFamily: {
@@ -48,6 +50,7 @@ const config: Config = {
         standard: "cubic-bezier(0.2, 0.0, 0, 1.0)",
       },
       width: {
+        26: "6.5rem",
         128: "32rem",
         183: "45.75rem",
       },
