@@ -2,6 +2,7 @@ import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import PNGPlaceholder from "#/PNG/placeholder.png";
 import SVGIllustrationWorking from "#/SVG/illustration-working.svg";
+import { Advantages } from "@/components/Advantages/Advantages";
 import { Form } from "@/components/Form/Form";
 import { Hero } from "@/components/Hero/Hero";
 import { ShortenedLinks } from "@/components/ShortenedLinks/ShortenedLinks";
@@ -47,8 +48,8 @@ const Home = () => (
     <div className="sm:bg-aircraft-white sm:flex sm:flex-col sm:w-full">
       <section
         className={twMerge(
-          "sm:flex sm:items-center sm:justify-center sm:-mt-20 sm:px-6 sm:relative sm:w-full",
-          "lg:-mt-21",
+          "sm:flex sm:items-center sm:justify-center sm:mb-20 sm:-mt-20 sm:px-6 sm:relative sm:w-full",
+          "lg:mb-30 lg:-mt-21",
         )}
       >
         <h2 className="sm:absolute sm:h-0 sm:opacity-0 sm:overflow-hidden sm:w-0">
@@ -59,6 +60,12 @@ const Home = () => (
           <Form />
 
           <ShortenedLinks />
+        </div>
+      </section>
+
+      <section className="sm:flex sm:px-6 sm:w-full">
+        <div className="sm:flex sm:max-w-page-container sm:mx-auto sm:w-full">
+          <Advantages />
         </div>
       </section>
     </div>

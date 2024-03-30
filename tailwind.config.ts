@@ -20,16 +20,25 @@ const config: Config = {
       fontFamily: {
         poppins: "var(--font-poppins)",
       },
+      gap: {
+        23: "5.75rem",
+        38: "9.5rem",
+        63: "15.75rem",
+      },
       height: {
+        22: "5.5rem",
         85: "21.25rem",
         120: "30rem",
       },
       margin: {
         21: "5.25rem",
+        27: "6.75rem",
+        30: "7.5rem",
         38: "9.5rem",
         42: "10.5rem",
       },
       maxWidth: {
+        135: "33.75rem",
         141: "35.25rem",
         142: "35.5rem",
         145: "36.25rem",
@@ -50,6 +59,7 @@ const config: Config = {
         standard: "cubic-bezier(0.2, 0.0, 0, 1.0)",
       },
       width: {
+        22: "5.5rem",
         26: "6.5rem",
         128: "32rem",
         183: "45.75rem",
@@ -64,8 +74,12 @@ const config: Config = {
     plugin(({ addBase, addComponents, addUtilities }) => ({
       addComponents: addComponents({
         ".button": {},
+        ".typography-body-01": {},
+        ".typography-body-02": {},
         ".typography-error": {},
         ".typography-H1": {},
+        ".typography-H2": {},
+        ".typography-H3": {},
         ".typography-subtitle-01": {},
         ".typography-subtitle-02": {},
       }),

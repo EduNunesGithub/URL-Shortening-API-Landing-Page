@@ -37,6 +37,21 @@
       width: fit-content;
     }
 
+    .typography-body-01 {
+      font-family: var(--font-poppins);
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.00625em;
+      line-height: 1.75rem;
+    }
+
+    .typography-body-02 {
+      font-family: var(--font-poppins);
+      font-size: 0.9375rem;
+      font-weight: 500;
+      line-height: 1.625rem;
+    }
+
     .typography-error {
       font-family: var(--font-poppins);
       font-size: 0.75rem;
@@ -51,6 +66,21 @@
       font-weight: 700;
       letter-spacing: -0.025em;
       line-height: 3rem;
+    }
+
+    .typography-H2 {
+      font-family: var(--font-poppins);
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 3rem;
+    }
+
+    .typography-H3 {
+      font-family: var(--font-poppins);
+      font-size: 1.375rem;
+      font-weight: 700;
+      line-height: 2.0625rem;
     }
 
     .typography-subtitle-01 {
@@ -78,6 +108,14 @@
     .button {
     }
 
+    .typography-body-01 {
+      font-size: 1.125rem;
+      line-height: 2rem;
+    }
+
+    .typography-body-02 {
+    }
+
     .typography-error {
       font-size: 1rem;
     }
@@ -85,6 +123,13 @@
     .typography-H1 {
       font-size: 5rem;
       line-height: 5.625rem;
+    }
+
+    .typography-H2 {
+      font-size: 2.5rem;
+    }
+
+    .typography-H3 {
     }
 
     .typography-subtitle-01 {

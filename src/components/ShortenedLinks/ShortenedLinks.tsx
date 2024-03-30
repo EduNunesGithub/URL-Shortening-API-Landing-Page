@@ -12,7 +12,8 @@ export const ShortenedLinks = () => {
     queryKey: ["todos"],
   });
 
-  if (status === "error" || status === "pending") return null;
+  if (status === "error" || status === "pending" || data.length === 0)
+    return null;
 
   const sorted = data.toSorted(({ id: idA }, { id: idB }) => idB - idA);
 
