@@ -18,6 +18,7 @@ export const Menu = () => {
       )}
     >
       <button
+        aria-label="Open Menu"
         className="sm:h-6 sm:flex sm:flex-shrink-0 sm:text-colorado-peak sm:w-6"
         onClick={() => setShow(true)}
       >

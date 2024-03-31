@@ -28,7 +28,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2bd0d0;
+  background: #008485;
   border: 0px none #ffffff;
   border-radius: 100px;
 }
@@ -38,7 +38,7 @@
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background: #2bd0d0;
+  background: #008485;
 }
 
 ::-webkit-scrollbar-track {
@@ -85,7 +85,7 @@ html {
 
     .button {
       align-items: center;
-      background-color: #2bd0d0;
+      background-color: #008485;
       border-radius: 100rem;
       color: #ffffff;
       display: flex;

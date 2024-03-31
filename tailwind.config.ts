@@ -11,10 +11,10 @@ const config: Config = {
       },
       colors: {
         "aircraft-white": "#EFF1F7",
-        "colorado-peak": "#9E9AA8",
+        "colorado-peak": "#6f6c79",
         "deep-well": "#34313D",
         "firecracker-salmon": "#F46363",
-        "mermaid-net": "#2BD0D0",
+        "mermaid-net": "#008485",
         "raisin-black": "#232127",
         silver: "#BFBFBF",
         "violet-purple": "#3A3054",
