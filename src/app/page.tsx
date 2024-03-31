@@ -14,7 +14,12 @@ const Home = () => {
   const count: unknown = getCookie("database-links-count", { cookies });
 
   return (
-    <main className="sm:flex sm:flex-col sm:h-full sm:justify-center sm:w-full">
+    <main
+      className={twMerge(
+        "sm:flex sm:flex-col sm:h-full sm:justify-center sm:pt-6 sm:w-full",
+        "lg:pt-8",
+      )}
+    >
       <section
         className={twMerge(
           "sm:flex sm:mb-42 sm:overflow-hidden sm:px-6 sm:w-full",

@@ -17,8 +17,54 @@
   outline-width: 0.125rem;
 }
 
+::-webkit-scrollbar {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+::-webkit-scrollbar-button {
+  width: 0rem;
+  height: 0rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2bd0d0;
+  border: 0px none #ffffff;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ae3e3;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #2bd0d0;
+}
+
+::-webkit-scrollbar-track {
+  background: #34313d;
+  border: 0rem none #ffffff;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #34313d;
+}
+
+::-webkit-scrollbar-track:active {
+  background: #34313d;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 body {
   background-color: #ffffff;
+}
+
+html {
+  overflow-y: scroll;
 }
 
 @layer components {
@@ -117,6 +163,13 @@ body {
       line-height: 1.4375rem;
     }
 
+    .typography-link-02 {
+      font-family: var(--font-poppins);
+      font-size: 1.125rem;
+      font-weight: 700;
+      line-height: 1.6875rem;
+    }
+
     .typography-subtitle-01 {
       font-family: var(--font-poppins);
       font-size: 1.125rem;
@@ -178,6 +231,11 @@ body {
     }
 
     .typography-link-01 {
+    }
+
+    .typography-link-02 {
+      font-size: 0.9375rem;
+      line-height: 1.4375rem;
     }
 
     .typography-subtitle-01 {

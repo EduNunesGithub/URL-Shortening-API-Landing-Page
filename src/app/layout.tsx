@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import { twMerge } from "tailwind-merge";
 import { LayoutClient } from "@/app/LayoutClient";
 import { Footer } from "@/components/Footer/Footer";
+import { Header } from "@/components/Header/Header";
 import "@/app/globals.css";
 
 const poppins = Poppins({
@@ -30,7 +31,7 @@ export default function RootLayout({
         )}
       >
         <LayoutClient>
-          <div></div>
+          <Header />
 
           {children}
 

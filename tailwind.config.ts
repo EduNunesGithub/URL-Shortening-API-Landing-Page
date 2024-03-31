@@ -90,6 +90,7 @@ const config: Config = {
         ".typography-H3": {},
         ".typography-H4": {},
         ".typography-link-01": {},
+        ".typography-link-02": {},
         ".typography-subtitle-01": {},
         ".typography-subtitle-02": {},
       }),
