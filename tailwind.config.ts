@@ -15,6 +15,8 @@ const config: Config = {
         "deep-well": "#34313D",
         "firecracker-salmon": "#F46363",
         "mermaid-net": "#2BD0D0",
+        "raisin-black": "#232127",
+        silver: "#BFBFBF",
         "violet-purple": "#3A3054",
       },
       fontFamily: {
@@ -22,6 +24,7 @@ const config: Config = {
       },
       gap: {
         23: "5.75rem",
+        25: "6.25rem",
         38: "9.5rem",
         63: "15.75rem",
       },
@@ -46,6 +49,7 @@ const config: Config = {
       },
       padding: {
         13: "3.25rem",
+        18: "4.5rem",
         23: "5.75rem",
         93: "23.25rem",
       },
@@ -83,6 +87,8 @@ const config: Config = {
         ".typography-H1": {},
         ".typography-H2": {},
         ".typography-H3": {},
+        ".typography-H4": {},
+        ".typography-link-01": {},
         ".typography-subtitle-01": {},
         ".typography-subtitle-02": {},
       }),

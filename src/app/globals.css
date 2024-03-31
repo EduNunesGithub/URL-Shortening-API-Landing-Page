@@ -97,6 +97,22 @@
       line-height: 2.0625rem;
     }
 
+    .typography-H4 {
+      font-family: var(--font-poppins);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.015625em;
+      line-height: 1.5rem;
+    }
+
+    .typography-link-01 {
+      font-family: var(--font-poppins);
+      font-size: 0.9375rem;
+      font-weight: 500;
+      letter-spacing: -0.01525em;
+      line-height: 1.4375rem;
+    }
+
     .typography-subtitle-01 {
       font-family: var(--font-poppins);
       font-size: 1.125rem;
@@ -152,6 +168,12 @@
     }
 
     .typography-H3 {
+    }
+
+    .typography-H4 {
+    }
+
+    .typography-link-01 {
     }
 
     .typography-subtitle-01 {

@@ -9,7 +9,7 @@ import { Hero } from "@/components/Hero/Hero";
 import { ShortenedLinks } from "@/components/ShortenedLinks/ShortenedLinks";
 
 const Home = () => (
-  <main className="sm:flex sm:flex-col sm:h-full sm:w-full">
+  <main className="sm:flex sm:flex-col sm:h-full sm:justify-center sm:w-full">
     <section
       className={twMerge(
         "sm:flex sm:mb-42 sm:overflow-hidden sm:px-6 sm:w-full",
