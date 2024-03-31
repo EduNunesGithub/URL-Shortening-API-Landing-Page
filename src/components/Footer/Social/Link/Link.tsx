@@ -23,10 +23,8 @@ export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
     >
       <Image
         {...imageProps}
-        blurDataURL={PNGPlaceholder.blurDataURL}
         className="sm:h-6 sm:object-contain sm:w-6"
         height={24}
-        placeholder="blur"
         width={24}
       />
     </NextLink>

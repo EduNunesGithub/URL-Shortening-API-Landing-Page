@@ -76,6 +76,7 @@ const config: Config = {
     },
   },
   plugins: [
+    require("daisyui"),
     plugin(({ addBase, addComponents, addUtilities }) => ({
       addComponents: addComponents({
         ".background-boost": {},

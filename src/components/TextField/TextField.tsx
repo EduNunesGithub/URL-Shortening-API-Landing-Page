@@ -27,7 +27,7 @@ export const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
       <input
         {...props}
         className={twMerge(
-          "sm:border-3 sm:border-transparent sm:h-12 sm:px-[0.8125rem] sm:rounded-md sm:text-deep-well sm:typography-subtitle-02 sm:w-full",
+          "sm:bg-white sm:border-3 sm:border-transparent sm:h-12 sm:px-[0.8125rem] sm:rounded-md sm:text-deep-well sm:typography-subtitle-02 sm:w-full",
           "sm:placeholder:opacity-50 sm:placeholder:text-deep-well",
           "lg:h-16 lg:px-[1.8125rem]",
           error !== undefined &&

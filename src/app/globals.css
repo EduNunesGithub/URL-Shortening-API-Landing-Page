@@ -17,6 +17,10 @@
   outline-width: 0.125rem;
 }
 
+body {
+  background-color: #ffffff;
+}
+
 @layer components {
   @media (min-width: 0px) {
     .background-boost {

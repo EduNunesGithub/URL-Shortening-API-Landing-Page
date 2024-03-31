@@ -1,4 +1,5 @@
 import axios, { AxiosError } from "axios";
+import { setCookie } from "cookies-next";
 import { ShortenParams, ShortenResponse } from "@/app/api/shorten/route";
 import { database } from "@/database/database";
 import { Params, Query, Response } from "@/lib/shortener/shortener";
@@ -91,6 +92,9 @@ export default async function POST(
     case undefined:
       throw new Error("Unable to add link to the database");
     default:
+      const count = await database.links.count();
+      setCookie("database-links-count", count);
+
       return link;
   }
 }
