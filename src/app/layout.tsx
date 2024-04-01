@@ -50,6 +50,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-US">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="IqqD4SlrqMlvQ6DRNdoR8Euud5vU4r6mvcp9N6Pwj_A"
+        />
+      </head>
+
       <body
         className={twMerge(
           poppins.variable,
