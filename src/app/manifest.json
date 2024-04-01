@@ -1,0 +1,42 @@
+{
+  "background_color": "#34313D",
+  "description": "Enhance your link management with our feature-rich link shortener with analytics. Measure clicks, conversions, and engagement to make data-driven decisions. Start optimizing your links today!",
+  "display": "standalone",
+  "icons": [
+    {
+      "sizes": "128x128",
+      "src": "/PNG/icon-128x128.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "256x256",
+      "src": "/PNG/icon-256x256.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "512x512",
+      "src": "/PNG/icon-512x512.png",
+      "type": "image/png"
+    }
+  ],
+  "name": "Shortly | Link Shortener",
+  "orientation": "portrait",
+  "screenshots": [
+    {
+      "src": "PNG/preview-01.png",
+      "sizes": "900x660",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Wonder Widgets"
+    },
+    {
+      "src": "PNG/preview-mobile-01.png",
+      "sizes": "360x740",
+      "type": "image/png",
+      "label": "Wonder Widgets"
+    }
+  ],
+  "short_name": "Shortly",
+  "start_url": "/",
+  "theme_color": "#008485"
+}
