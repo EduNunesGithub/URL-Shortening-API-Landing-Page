@@ -17,6 +17,12 @@
       "sizes": "512x512",
       "src": "/PNG/icon-512x512.png",
       "type": "image/png"
+    },
+    {
+      "sizes": "512x512",
+      "src": "/PNG/icon-mask-512x512.png",
+      "purpose": "maskable",
+      "type": "image/png"
     }
   ],
   "name": "Shortly | Link Shortener",

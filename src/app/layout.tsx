@@ -55,6 +55,12 @@ export default function RootLayout({
           name="google-site-verification"
           content="IqqD4SlrqMlvQ6DRNdoR8Euud5vU4r6mvcp9N6Pwj_A"
         />
+
+        <link
+          rel="shortcut icon"
+          href="/PNG/icon-128x128.png"
+          type="image/png"
+        />
       </head>
 
       <body
